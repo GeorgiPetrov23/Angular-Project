@@ -1,0 +1,30 @@
+<form class="login-form" #form="ngForm" (ngSubmit)="login(form)">
+    <label for="email">Email:</label>
+    <input type="text" id="email" name="email" placeholder="Email" ngModel #inputEmail="ngModel" required [appEmail]="domains">
+
+    @if(inputEmail?.touched){
+        <div>
+            @if(inputEmail?.errors?.['required']){
+                <p class="errors">Email is required!</p>
+            }
+            @if(inputEmail?.errors?.['emailValidator']){
+                <p class="errors">Email is not valid!</p>
+            }
+        </div>
+    }
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" placeholder="Password" ngModel #inputPassword="ngModel" minlength="5" required>
+    
+    @if(inputPassword?.touched){
+        <div>
+            @if(inputPassword?.errors?.['required']){
+                <p class="errors">Password is required!</p>
+            }
+            @if(inputPassword?.errors?.['minlength']){
+                <p class="errors">Password must be at least 5 characters!</p>
+            }
+        </div>
+    }
+    <button type='submit' class="login-btn">Login</button>
+    <div class="signup">Don't have an account? <a routerLink="/register">Sign up here</a></div>
+</form>  

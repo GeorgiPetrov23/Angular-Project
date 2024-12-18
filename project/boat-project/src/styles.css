@@ -1,0 +1,11 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    background: url(.//app/images/Beaches-in-the-Caribbean.png)
+        no-repeat fixed;
+    background-size: cover;
+    
+    /* margin-top: 50px; */
+    height: 100vh; 
+    width:  100vw;
+    overflow-X: hidden;
+}

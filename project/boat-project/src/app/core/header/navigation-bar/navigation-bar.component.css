@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.nav-wrapper{
+    position: fixed;
+    margin-top: 30px;
+    display: flex;
+    width: 95%;
+    height: 30px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center ;
+    margin-bottom: 30px;
+    position: sticky; 
+    top:0;
+}
+
+.nav-btn {
+    font-size: 17px;
+    margin-left: 10px;
+    padding: 5px 10px;
+    color: white;
+    
+}
+
+.nav-btn:hover {
+    cursor: pointer;
+    background-color: transparent;
+    color: #202340;
+    margin-left: 10px;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}

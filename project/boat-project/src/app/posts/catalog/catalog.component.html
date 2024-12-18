@@ -1,0 +1,13 @@
+@if(boats.length > 0){
+    @for(boat of boats; track $index){
+        <div class="boat-card" id="boat1">
+        <img [src]="boat.imageUrl" />
+        <h3>Name: {{boat.name}}</h3>
+        <p>Company: {{boat.companyName}}</p>
+        <div class='detail-btn' [routerLink]="boat._id">Details</div>
+    </div>
+    }
+}
+@else{
+    <div class="no-post">There are no posts yet!</div>
+}

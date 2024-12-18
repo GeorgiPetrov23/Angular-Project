@@ -1,0 +1,70 @@
+<form class="boat-form" #form="ngForm" (ngSubmit)="create(form)">
+    <label for="name">Name of Boat:</label>
+    <input type="text" id="name" name="name" placeholder="Name Of Boat" ngModel #inputName="ngModel" required>
+    @if(inputName?.touched){
+        <div>
+            @if(inputName?.errors?.['required']){
+                <p class="errors">Name is required!</p>
+            }
+        </div>
+    } 
+
+    <label for="companyName">Company Name:</label>
+    <input type="text" id="companyName" name="companyName" placeholder="Company Name" ngModel #inputCompany="ngModel" required>
+    @if(inputCompany?.touched){
+        <div>
+            @if(inputCompany?.errors?.['required']){
+                <p class="errors">Company name is required!</p>
+            }
+        </div>
+    }
+
+    <label for="length">Length (in feet):</label>
+    <input type="number" id="length" placeholder="Length" name="length" ngModel #inputLength="ngModel" required min="1">
+    @if(inputLength?.touched){
+        <div>
+            @if(inputLength?.errors?.['required']){
+                <p class="errors">Length is required!</p>
+            }
+            @if(inputLength?.errors?.['min']){
+                <p class="errors">Length needs to be positive number!</p>
+            }
+        </div>
+    }
+
+    <label for="range">Range (at 5 kn):</label>
+    <input type="number" id="range" placeholder="Range" name="range" ngModel #inputRange="ngModel" required min="1">
+    @if(inputRange?.touched){
+        <div>
+            @if(inputRange?.errors?.['required']){
+                <p class="errors">Range is required!</p>
+            }
+            @if(inputRange?.errors?.['min']){
+                <p class="errors">Range needs to be positive number!</p>
+            }
+        </div>
+    }
+
+    <label for="rechargeTime">Recharge Time:</label>
+    <input type="number" id="rechargeTime"  placeholder="Recharge Time" name="recharge" ngModel #inputRecharge="ngModel" required min="1">
+    @if(inputRecharge?.touched){
+        <div>
+            @if(inputRecharge?.errors?.['required']){
+                <p class="errors">Recharge is required!</p>
+            }
+            @if(inputRecharge?.errors?.['min']){
+                <p class="errors">Recharge time needs to be positive number!</p>
+            }
+        </div>
+    }
+    <label for="image">Image URL:</label>
+    <input type="url" id="image" placeholder="Image URL" name="image" ngModel #inputImage="ngModel" required>
+    @if(inputImage?.touched){
+        <div>
+            @if(inputImage?.errors?.['required']){
+                <p class="errors">Image is required!</p>
+            }
+        </div>
+    }
+    <button type="submit" class="edit-btn">Edit Boat</button>
+</form>

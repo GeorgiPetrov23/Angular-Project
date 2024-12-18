@@ -1,0 +1,90 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+main {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.boat-details {
+    background-color: rgb(11 34 64 / 50%);
+    padding: 20px;
+    border-radius: 8px;
+    width: 600px;
+    /* margin: 0 auto; */
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -30%);
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 25px;
+}
+
+.boat-image {
+    width: 500px;
+    max-width: 600px;
+    border-radius: 8px;
+    border: solid rgb(11 34 64 / 70%);
+    margin-bottom: 20px;
+}
+
+.boat-info {
+    width: 100%;
+    text-align: left;
+}
+
+.boat-info p,
+.boat-info h2 {
+    margin: 10px 0;
+    color: white;
+}
+
+.actions {
+    margin-top: 20px;
+    display: flex;
+    gap: 10px;
+}
+
+.edit-btn, .delete-btn, .like-btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.like-btn {
+    background-color: rgb(11 34 64 / 50%);
+    color: white;
+}
+
+.like-btn:disabled {
+    background-color: rgb(11 34 64 / 50%);
+}
+
+.edit-btn {
+    background-color: rgb(11 34 64 / 50%);
+    color: white;
+}
+
+.delete-btn {
+    background-color: rgb(11 34 64 / 50%);
+    color: white;
+}
+
+/* .edit-btn, .delete-btn, .like-btn:hover {
+    opacity: 0.9;
+} */
+
+.liked-message {
+    margin-top: 20px;
+    color: white;
+    font-weight: bold;
+}
